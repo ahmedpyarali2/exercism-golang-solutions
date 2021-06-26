@@ -64,4 +64,16 @@ var testCases = []struct {
 		0,
 		true,
 	},
+	{ // testing special character
+		"^&!!",
+		"!&*~",
+		3,
+		false,
+	},
+	{ // test UTF-8 characters
+		"¶¶¶¶",
+		"¶¶¶¶",
+		0,
+		false,
+	},
 }
