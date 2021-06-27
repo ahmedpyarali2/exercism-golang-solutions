@@ -27,7 +27,7 @@ func Convert(number int) string {
 
 	// add the number itself if the number is not a factor of either 3, 5 or 7
 	if raindropSound == "" {
-		raindropSound += strconv.Itoa(number)
+		return strconv.Itoa(number)
 	}
 
 	return raindropSound
