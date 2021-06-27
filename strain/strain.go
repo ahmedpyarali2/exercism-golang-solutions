@@ -25,14 +25,7 @@ func (ints Ints) Keep(fn func(int) bool) Ints {
 
 // Discard returns Ints where the given predicate function is false.
 func (ints Ints) Discard(fn func(int) bool) Ints {
-	var discard Ints
-	for _, v := range ints {
-		if !fn(v) {
-			discard = append(discard, v)
-		}
-	}
-
-	return discard
+	return ints.Keep(func(n int) bool { return !fn(n) })
 }
 
 // Keep returns Lists where the given predicate function is true.
