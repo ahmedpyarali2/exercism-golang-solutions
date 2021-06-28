@@ -7,8 +7,10 @@ import "unicode"
 func Score(s string) int {
 	var score int
 
-	for _, v := range s {
-		switch unicode.ToLower(v) {
+	for _, r := range s {
+		switch unicode.ToLower(r) {
+		case 'a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't':
+			score++
 		case 'd', 'g':
 			score += 2
 		case 'b', 'c', 'm', 'p':
@@ -21,8 +23,6 @@ func Score(s string) int {
 			score += 8
 		case 'q', 'z':
 			score += 10
-		default:
-			score++
 		}
 	}
 

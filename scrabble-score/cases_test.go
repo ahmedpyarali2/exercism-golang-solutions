@@ -21,4 +21,6 @@ var scrabbleScoreTests = []scrabbleTest{
 	{"pinata", 8},                      // english-like word
 	{"", 0},                            // empty input
 	{"abcdefghijklmnopqrstuvwxyz", 87}, // entire alphabet available
+	{"@#*-_", 0},                       // special characters
+	{"187239819827398172983", 0},       // all numbers
 }
