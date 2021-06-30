@@ -76,4 +76,10 @@ var testCases = []struct {
 		0,
 		false,
 	},
+	{ // test more UTF-8 characters
+		"Ä",
+		"A",
+		1,
+		false,
+	},
 }
